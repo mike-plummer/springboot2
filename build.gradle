@@ -1,0 +1,53 @@
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${SPRING_BOOT_VERSION}")
+		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${KOTLIN_VERSION}")
+		classpath("org.jetbrains.kotlin:kotlin-allopen:${KOTLIN_VERSION}")
+	}
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'kotlin-spring'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.objectpartners.plummer'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+compileKotlin {
+	kotlinOptions {
+		freeCompilerArgs = ["-Xjsr305=strict"]
+		jvmTarget = "${JVM_VERSION}"
+	}
+}
+compileTestKotlin {
+	kotlinOptions {
+		freeCompilerArgs = ["-Xjsr305=strict"]
+		jvmTarget = "${JVM_VERSION}"
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-actuator')
+	compile('org.springframework.boot:spring-boot-starter-data-mongodb-reactive')
+	compile('org.springframework.kafka:spring-kafka')
+	compile('org.jetbrains.kotlin:kotlin-stdlib-jdk8')
+	compile('org.jetbrains.kotlin:kotlin-reflect')
+    compile('de.flapdoodle.embed:de.flapdoodle.embed.mongo')
+
+    compile("io.springfox:springfox-swagger2:${SPRINGFOX_VERSION}")
+    compile("io.springfox:springfox-swagger-ui:${SPRINGFOX_VERSION}")
+	compileOnly('org.projectlombok:lombok')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
