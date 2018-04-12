@@ -1,4 +1,4 @@
-package com.objectpartners.plummer.springboot2
+package com.objectpartners.plummer.springboot2.domain
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
