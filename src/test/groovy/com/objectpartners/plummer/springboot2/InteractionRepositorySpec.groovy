@@ -1,5 +1,7 @@
 package com.objectpartners.plummer.springboot2
 
+import com.objectpartners.plummer.springboot2.domain.Interaction
+import com.objectpartners.plummer.springboot2.domain.InteractionType
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import reactor.core.publisher.Flux

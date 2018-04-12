@@ -1,4 +1,4 @@
-package com.objectpartners.plummer.springboot2
+package com.objectpartners.plummer.springboot2.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -18,6 +18,6 @@ class SwaggerConfiguration {
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build()
-                .pathMapping("/");
+                .pathMapping("/")
     }
 }
