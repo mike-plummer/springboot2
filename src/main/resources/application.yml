@@ -1,0 +1,14 @@
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include:
+        - configprops
+        - env
+        - health
+        - info
+        - loggers
+        - metrics
