@@ -12,3 +12,8 @@ management:
         - info
         - loggers
         - metrics
+spring:
+  kafka:
+    consumer:
+      group-id: sbv2
+      auto-offset-reset: earliest

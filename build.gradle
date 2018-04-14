@@ -53,8 +53,6 @@ dependencies {
     compile("io.springfox:springfox-swagger2:${SPRINGFOX_VERSION}")
     compile("io.springfox:springfox-swagger-ui:${SPRINGFOX_VERSION}")
 
-	compileOnly('org.projectlombok:lombok')
-
 	runtime("org.springframework.boot:spring-boot-properties-migrator")
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
